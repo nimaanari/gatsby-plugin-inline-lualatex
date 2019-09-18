@@ -1,0 +1,1 @@
+process.env.GATSBY_SSR_DIRNAME = __dirname;

@@ -1,0 +1,21 @@
+{
+  "name": "gatsby-plugin-inline-lualatex",
+  "version": "1.0.0",
+  "description": "Provides React components representing inline LuaLaTeX source which gets compiled to PDF.",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir .",
+    "watch": "babel src --watch --out-dir ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimaanari/gatsby-plugin-inline-lualatex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nimaanari/gatsby-plugin-inline-lualatex/issues"
+  },
+  "homepage": "https://github.com/nimaanari/gatsby-plugin-inline-lualatex#readme"
+}
