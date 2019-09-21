@@ -6,7 +6,7 @@ const init = () => {
     return async ([outputPath, chunks]) => {
         const source = chunks.flat(Infinity).join('');
         if (path.extname(outputPath)=='.pdf'){
-            await compile(source, outputPath);
+            await compile(outputPath, source);
         }
         else{
             await fs.writeFile(outputPath, source);

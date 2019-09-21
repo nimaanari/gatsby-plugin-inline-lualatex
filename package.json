@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-inline-lualatex",
-  "version": "1.0.0",
-  "description": "Provides React components representing inline LuaLaTeX source which gets compiled to PDF.",
+  "version": "1.0.1",
+  "description": "Let Gatsby automatically generate PDFs by using React components that encode LuaLaTeX docs.",
   "main": "index.js",
   "scripts": {
     "build": "babel src --out-dir .",
@@ -11,8 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/nimaanari/gatsby-plugin-inline-lualatex.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "gatsby",
+    "plugin",
+    "latex",
+    "pdf",
+    "react"
+  ],
+  "author": "Nima Anari",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nimaanari/gatsby-plugin-inline-lualatex/issues"
@@ -26,7 +32,7 @@
   "dependencies": {
     "@babel/runtime": "^7.6.0",
     "fs-extra": "^8.1.0",
-    "netlify-lualatex": "^1.1.0",
+    "netlify-lualatex": "^1.2.0",
     "react": "^16.9.0",
     "react-inline-stream": "^1.0.0",
     "sync-rpc": "^1.3.6"
