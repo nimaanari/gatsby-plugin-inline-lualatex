@@ -9,11 +9,11 @@ const PreambleContext = React.createContext({
     ensure: () => {}
 });
 
-export const Preamble = ({ key, children }) => {
+export const Preamble = ({ preambleKey, children }) => {
     const preamble = useContext(PreambleContext);
     const record = (chunks) => {
         const text = chunks.flat(Infinity).join('');
-        const theKey = key || text;
+        const theKey = preambleKey || text;
         preamble.ensure(theKey, text);
     };
     return (
@@ -69,8 +69,8 @@ export const Environment = ({ tag, options, children }) => (
     </>
 );
 
-export const PreambleMacro = (props) => <Preamble key={props.tag}><Macro {...props} /></Preamble>
+export const PreambleMacro = (props) => <Preamble preambleKey={props.tag}><Macro {...props} /></Preamble>
 
 export const DocumentClass = (props) => <PreambleMacro tag="documentclass" {...props} />
 
-export const UsePackage = (props) => <Preamble key={ `usepackage-${ React.Children.toArray(props.children)[0] }` }><Macro tag="usepackage" { ...props } /></Preamble>;
+export const UsePackage = (props) => <Preamble preambleKey={ `usepackage-${ React.Children.toArray(props.children)[0] }` }><Macro tag="usepackage" { ...props } /></Preamble>;
