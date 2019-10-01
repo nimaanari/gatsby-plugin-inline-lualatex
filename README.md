@@ -21,7 +21,7 @@ Inside any of your pages you can create an inline LuaLaTeX document which then g
 // This file could be under src/pages/ for example.
 import { Document, DocumentClass, Preamble, UsePackage, Chunk, Environment } from "gatsby-plugin-inline-lualatex"
 
-export default () => {
+export default () => (
     <div>
         <p> This is a regular Gatsby page. </p>
         <Document output="main.pdf"> {/* This creates public/main.pdf */}
@@ -35,7 +35,7 @@ export default () => {
             </Environment>
         </Document>
     </div>
-}
+)
 ```
 
 ## License
